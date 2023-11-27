@@ -73,3 +73,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Vehicle Physics Pro Asset
+/[Aa]ssets/Vehicle Physics Pro
+/[Aa]ssets/Vehicle Physics Pro.meta
