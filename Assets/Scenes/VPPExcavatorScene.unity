@@ -2012,17 +2012,17 @@ MonoBehaviour:
   rightTrackAnimator: {fileID: 597271685}
   trackAnimationMultiplier: 2
   engine:
-    idleRpm: 1000
-    peakRpm: 4200
-    maxRpm: 6500
-    idleRpmTorque: 135
-    peakRpmTorque: 188
+    idleRpm: 700
+    peakRpm: 2000
+    maxRpm: 3000
+    idleRpmTorque: 10
+    peakRpmTorque: 42.2
     idleRpmCurveBias: 0
     peakRpmCurveBias: 0
-    inertia: 0.5
-    frictionTorque: 20
-    rotationalFriction: 0.1
-    viscousFriction: 0.01
+    inertia: 0.01
+    frictionTorque: 10
+    rotationalFriction: 0
+    viscousFriction: 0
     torqueCap: 0
     torqueCapLimit: 200
     rpmLimiter: 0
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   maxTrackRpmChangeRate: 100
   trackDriveTorque: 3000
   trackBrakeTorque: 4000
-  trackEnergyConsumption: 10000
+  trackEnergyConsumption: 100
   trackEneryPriority: 1
   autoBrakeOnIdle: 0
   autoBrakeRpmThreshold: 1
