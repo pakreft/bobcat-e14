@@ -13,7 +13,7 @@ public class IgnitionKey : MonoBehaviour
     {
         gameObject.GetComponent<Button>().onClick.AddListener(TaskOnClick);
         m_state = m_vehicleControllerInput.ignitionKey;
-        SetRotation();
+        SetRotationAndParticleSystem();
     }
 
     private void TaskOnClick()
@@ -26,10 +26,10 @@ public class IgnitionKey : MonoBehaviour
             m_state = 0;
 
         m_vehicleControllerInput.ignitionKey = m_state;
-        SetRotation();
+        SetRotationAndParticleSystem();
     }
 
-    private void SetRotation()
+    private void SetRotationAndParticleSystem()
     {
         switch (m_state)
         {

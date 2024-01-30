@@ -15,17 +15,17 @@ public class IdleControlInput : MonoBehaviour
         m_slider = GetComponent<Slider>();
         m_slider.onValueChanged.AddListener(TaskOnValueChanged);
         m_idleControlInput = m_vehicleControllerInput.idleControlInput;
-        SetPosition();
+        SetParticleSystem();
     }
 
     private void TaskOnValueChanged(float value)
     {
         m_idleControlInput = value;
         m_vehicleControllerInput.idleControlInput = m_idleControlInput;
-        SetPosition();
+        SetParticleSystem();
     }
 
-    private void SetPosition()
+    private void SetParticleSystem()
     {
         float minAlpha = 30.0f;
         float maxAlpha = 170.0f;
