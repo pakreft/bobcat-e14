@@ -1,12 +1,10 @@
 using UnityEngine;
-using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class DroneView : MonoBehaviour
 {
     [SerializeField] private Camera m_droneCamera;
-    [SerializeField] private Transform m_destination;
-    [SerializeField] private NavMeshAgent m_agent;
+    [SerializeField] private Automation m_automation;
 
     private RectTransform m_rectTransform;
     private RawImage m_rawImage;
@@ -57,12 +55,9 @@ public class DroneView : MonoBehaviour
 
                 // Step 3.4: Return the point at enterDistance units along the ray
                 Vector3 hitPoint = ray.GetPoint(enterDistance);
-                
-                // Step 4: Set position of the yellow spot
-                m_destination.position = new Vector3(hitPoint.x, m_destination.position.y, hitPoint.z);
 
-                // Move the NavMeshAgent
-                m_agent.destination = m_destination.position;
+                // Step 4: Move agent
+                m_automation.SetAgentDestination(hitPoint);
             }
         }
     }
